@@ -1,0 +1,82 @@
+" indent guides and space hilighers
+let g:indent_guides_enable_on_vim_startup = 0
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=gray85 ctermbg=233
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=gray70 ctermbg=234
+" No highlighting of unwanted spaces
+set nolist
+set nospell
+
+" Use jk to exit insert mode to avoid moving hands away from typing position
+inoremap jk <ESC>
+
+" Fast unload of a buffer (Close file) without closing the window
+nnoremap <Leader>q :Bdelete<CR>
+
+" Indent 2 spaces by default
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+
+" CtrlSF plugin key configs
+nmap     <C-F>f <Plug>CtrlSFPrompt
+vmap     <C-F>f <Plug>CtrlSFVwordPath
+vmap     <C-F>F <Plug>CtrlSFVwordExec
+nmap     <C-F>n <Plug>CtrlSFCwordPath
+nmap     <C-F>p <Plug>CtrlSFPwordPath
+nnoremap <C-F>o :CtrlSFOpen<CR>
+nnoremap <C-F>t :CtrlSFToggle<CR>
+inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+nmap     <C-F>l <Plug>CtrlSFQuickfixPrompt
+vmap     <C-F>l <Plug>CtrlSFQuickfixVwordPath
+vmap     <C-F>L <Plug>CtrlSFQuickfixVwordExec
+let g:ctrlsf_default_root = 'project'
+
+" vim-go plugin mappings and settings (Spf13 has most of the settings done,
+" here is a list that is missing from spf13 default)
+" For go file, use tabs and indents matching gofmt
+au FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4
+au FileType go setlocal noexpandtab
+" Open definition shortcuts
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+
+" Markdown auto wrap
+autocmd Filetype markdown setlocal wrap
+autocmd Filetype markdown setlocal linebreak
+
+" Color scheme
+set background=dark
+colorscheme wombat256i
+
+" Change the bufferline in airline to try to highlight current buffer
+" by allow rotation and fix current buffer to be the 2nd last
+let g:bufferline_rotate = 1
+let g:bufferline_fixed_index = -2
+
+" configure browser for haskell_doc.vim
+let g:haddock_browser = "/usr/bin/google-chrome"
+
+" Make vim work better with file watchers
+" https://github.com/webpack/webpack/issues/781
+set backupcopy=yes
+
+" Flow configs
+let g:flow#autoclose=1
+" Use localy installed flow
+" https://github.com/steelsojka/deoplete-flow/issues/4
+let local_flow = finddir('node_modules', '.;') . '/.bin/flow'
+if matchstr(local_flow, "^\/\\w") == ''
+	let local_flow= getcwd() . "/" . local_flow
+endif
+if executable(local_flow)
+	let g:flow#flowpath = local_flow
+	let g:deoplete#sources#flow#flow_bin = local_flow
+endif
+
+"go file save slow problem test see: https://github.com/fatih/vim-go/issues/144
+"This only happens when there is an error in the source code, compilable code
+"nomally do not slow the save process down
+"let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+"let g:go_fmt_command = "gofmt"

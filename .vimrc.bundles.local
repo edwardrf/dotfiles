@@ -1,0 +1,4 @@
+Bundle 'dyng/ctrlsf.vim'
+Bundle 'moll/vim-bbye'
+Bundle 'flowtype/vim-flow'
+UnBundle 'amirh/HTML-AutoCloseTag'
