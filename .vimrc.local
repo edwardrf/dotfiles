@@ -6,6 +6,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=gray70 ctermbg=234
 " No highlighting of unwanted spaces
 set nolist
 set nospell
+set timeoutlen=1000 ttimeoutlen=0
 
 " Use jk to exit insert mode to avoid moving hands away from typing position
 inoremap jk <ESC>
