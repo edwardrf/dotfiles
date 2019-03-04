@@ -1,0 +1,46 @@
+partial alphanumeric_keys modifier_keys
+xkb_symbols "edwardrf" {
+
+    include "us(basic)"
+    name[Group1]= "English (US, EdwardRF's custom mapping)";
+
+    key <AE04> {
+        symbols[Group1]= [               4,          dollar ],
+        symbols[Group2]= [             End,             End ]
+    };
+    key <AE10> {
+        symbols[Group1]= [               0,      parenright ],
+        symbols[Group2]= [            Home,            Home ]
+    };
+    key <AD07> {
+        type= "ALPHABETIC",
+        symbols[Group1]= [               u,               U ],
+        symbols[Group2]= [           Prior,           Prior ]
+    };
+    key <AC03> {
+        type= "ALPHABETIC",
+        symbols[Group1]= [               d,               D ],
+        symbols[Group2]= [            Next,            Next ]
+    };
+    key <AC06> {
+        type= "ALPHABETIC",
+        symbols[Group1]= [               h,               H ],
+        symbols[Group2]= [            Left,            Left ]
+    };
+    key <AC07> {
+        type= "ALPHABETIC",
+        symbols[Group1]= [               j,               J ],
+        symbols[Group2]= [            Down,            Down ]
+    };
+    key <AC08> {
+        type= "ALPHABETIC",
+        symbols[Group1]= [               k,               K ],
+        symbols[Group2]= [              Up,              Up ]
+    };
+    key <AC09> {
+        type= "ALPHABETIC",
+        symbols[Group1]= [               l,               L ],
+        symbols[Group2]= [           Right,           Right ]
+    };
+    key <CAPS> {         [     Mode_switch,     Mode_switch ] };
+};
