@@ -8,7 +8,8 @@ These files needs to be copied to /usr/share/X11/xkb/
 │   ├── evdev.lst  // Added edwardrf variant to the layouts
 │   └── evdev.xml  // Description of the edwardrf layout added to the us base layout
 └── symbols
-    └── edwardrf   // Custome symbol definiation that is referenced by the evdev files
+    └── us         // Custome symbol definiation that is referenced by the evdev files
+    └── edwardrf   // NOT USED, the portion to be added to us layout
 
 Only the part where 'edwardrf' layout is referenced in evdev files are needed, you can edit your existing evdev files to add them
 
