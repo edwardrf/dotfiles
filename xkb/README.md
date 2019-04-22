@@ -17,8 +17,13 @@ Only the part where 'edwardrf' layout is referenced in evdev files are needed, y
 
 Useful Links
 ------------
+
+Gnome use key "org.gnome.desktop.input-sources sources" to config which input to use, and one of them is xkb. (dconf, gsettings get)
+/etc/default/keyboard can be used to select the 'edwardrf' variant to enable this layout even in text console.
+
 https://help.ubuntu.com/community/Custom%20keyboard%20layout%20definitions?action=show&redirect=Howto%3A+Custom+keyboard+layout+definitions
 https://askubuntu.com/questions/510024/what-are-the-steps-needed-to-create-new-keyboard-layout-on-ubuntu
 http://www.charvolant.org/doug/xkb/html/node5.html#Sec:Symbols
 https://unix.stackexchange.com/questions/202883/create-xkb-configuration-from-xmodmap
+https://www.reddit.com/r/gnome/comments/4u0don/programmatically_change_gnomes_keyboard_layout/
 
