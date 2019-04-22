@@ -3,6 +3,7 @@ XKB based keyboard remap
 Since xmodmap is no longer supported by GNOME, a XKB based solution is used.
 
 These files needs to be copied to /usr/share/X11/xkb/
+```
 .
 ├── rules
 │   ├── evdev.lst  // Added edwardrf variant to the layouts
@@ -10,6 +11,7 @@ These files needs to be copied to /usr/share/X11/xkb/
 └── symbols
     └── us         // Custome symbol definiation that is referenced by the evdev files
     └── edwardrf   // NOT USED, the portion to be added to us layout
+```
 
 Only the part where 'edwardrf' layout is referenced in evdev files are needed, you can edit your existing evdev files to add them
 
