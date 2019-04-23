@@ -6,6 +6,7 @@ These files needs to be copied to /usr/share/X11/xkb/
 ```
 .
 ├── rules
+│   ├── evdev      // Remove the rule adding *:2 to the symbols when there is a 2nd group layout
 │   ├── evdev.lst  // Added edwardrf variant to the layouts
 │   └── evdev.xml  // Description of the edwardrf layout added to the us base layout
 └── symbols
@@ -14,7 +15,11 @@ These files needs to be copied to /usr/share/X11/xkb/
 ```
 
 Only the part where 'edwardrf' layout is referenced in evdev files are needed, you can edit your existing evdev files to add them
-
+IMPORTANT: evdev file has a line adding X:2 to the symbols when 2 layouts exists, this would cause conflict.
+```
+! model		layout[2]	=	symbols
+  *		*		=	+%l[2]%(v[2]):2
+```
 Useful Links
 ------------
 
