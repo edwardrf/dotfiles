@@ -1814,10 +1814,7 @@ xkb_symbols "edwardrf" {
     name[Group1]= "English US";
     name[Group2]= "English (US, EdwardRF's custom mapping)";
 
-    key <AE04> {
-        symbols[Group1]= [               4,          dollar ],
-        symbols[Group2]= [             End,             End ]
-    };
+    key <AE04> {[4, dollar], [End, End]};
     key <AE10> {
         symbols[Group1]= [               0,      parenright ],
         symbols[Group2]= [            Home,            Home ]
