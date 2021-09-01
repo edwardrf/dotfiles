@@ -1811,95 +1811,7 @@ xkb_symbols "3l" {
     key <AC06> { [ d,         D,         question,     Greek_delta,    period,    colon,      U2286,    Greek_DELTA ] };
     key <AC07> { [ r,         R,         parenleft,    Greek_rho,      4,         D,          U2227,    Greek_RHO ] };
     key <AC08> { [ t,         T,         parenright,   Greek_tau,      5,         E,          U2228,    Greek_TAU ] };
-    key <AC09> { [ n,         N,         apostrophe,   Greek_eta,      6, partial alphanumeric_keys modifier_keys
-xkb_symbols "edwardrf" {
-
-    include "us(basic)"partial alphanumeric_keys modifier_keys
-xkb_symbols "edwardrf" {
-
-    include "us(basic)"
-    name[Group1]= "English US";
-    name[Group2]= "English (US, EdwardRF's custom mapping)";
-
-    key <AE04> {[4, dollar], [End, End]};
-    key <AE10> {
-        symbols[Group1]= [               0,      parenright ],
-        symbols[Group2]= [            Home,            Home ]
-    };
-    key <AD07> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               u,               U ],
-        symbols[Group2]= [           Prior,           Prior ]
-    };
-    key <AC03> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               d,               D ],
-        symbols[Group2]= [            Next,            Next ]
-    };
-    key <AC06> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               h,               H ],
-        symbols[Group2]= [            Left,            Left ]
-    };
-    key <AC07> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               j,               J ],
-        symbols[Group2]= [            Down,            Down ]
-    };
-    key <AC08> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               k,               K ],
-        symbols[Group2]= [              Up,              Up ]
-    };
-    key <AC09> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               l,               L ],
-        symbols[Group2]= [           Right,           Right ]
-    };
-    key <CAPS> {         [     Mode_switch,     Mode_switch ] };
-};
-
-    name[Group1]= "English US";
-    name[Group2]= "English (US, EdwardRF's custom mapping)";
-
-    key <AE04> {[4, dollar], [End, End]};
-    key <AE10> {
-        symbols[Group1]= [               0,      parenright ],
-        symbols[Group2]= [            Home,            Home ]
-    };
-    key <AD07> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               u,               U ],
-        symbols[Group2]= [           Prior,           Prior ]
-    };
-    key <AC03> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               d,               D ],
-        symbols[Group2]= [            Next,            Next ]
-    };
-    key <AC06> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               h,               H ],
-        symbols[Group2]= [            Left,            Left ]
-    };
-    key <AC07> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               j,               J ],
-        symbols[Group2]= [            Down,            Down ]
-    };
-    key <AC08> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               k,               K ],
-        symbols[Group2]= [              Up,              Up ]
-    };
-    key <AC09> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               l,               L ],
-        symbols[Group2]= [           Right,           Right ]
-    };
-    key <CAPS> {         [     Mode_switch,     Mode_switch ] };
-};
-        F,          U2200,    Greek_ETA ] };
+    key <AC09> { [ n,         N,         apostrophe,   Greek_eta,      6, 	  F,          U2200,    Greek_ETA ] };
     key <AC10> { [ s,         S,         colon,        Greek_sigma,    NoSymbol,  NoSymbol,   U2203,    Greek_SIGMA ] };
 
     // Bottom row
@@ -1916,51 +1828,7 @@ xkb_symbols "edwardrf" {
     include "level5(modifier_mapping)"
 };
 
-// Chromebooks typically have the key which is normally in the capspartial alphanumeric_keys modifier_keys
-xkb_symbols "edwardrf" {
-
-    include "us(basic)"
-    name[Group1]= "English US";
-    name[Group2]= "English (US, EdwardRF's custom mapping)";
-
-    key <AE04> {[4, dollar], [End, End]};
-    key <AE10> {
-        symbols[Group1]= [               0,      parenright ],
-        symbols[Group2]= [            Home,            Home ]
-    };
-    key <AD07> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               u,               U ],
-        symbols[Group2]= [           Prior,           Prior ]
-    };
-    key <AC03> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               d,               D ],
-        symbols[Group2]= [            Next,            Next ]
-    };
-    key <AC06> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               h,               H ],
-        symbols[Group2]= [            Left,            Left ]
-    };
-    key <AC07> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               j,               J ],
-        symbols[Group2]= [            Down,            Down ]
-    };
-    key <AC08> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               k,               K ],
-        symbols[Group2]= [              Up,              Up ]
-    };
-    key <AC09> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               l,               L ],
-        symbols[Group2]= [           Right,           Right ]
-    };
-    key <CAPS> {         [     Mode_switch,     Mode_switch ] };
-};
-
+// Chromebooks typically have the key which is normally in the caps
 // lock position mapped to keycode 133 (LWIN). For 3l, it is critical
 // that the key in this positon correspond to tab, so there is a
 // variant available for chromebook hardware.
@@ -2102,6 +1970,9 @@ xkb_symbols "de_se_fi"  {
 
     include "level3(ralt_switch)"
 };
+
+// EdwardRF's custome mapping
+// Caps + HJKL and some other common navigation keys to minik vim behavior
 partial alphanumeric_keys modifier_keys
 xkb_symbols "edwardrf" {
 
